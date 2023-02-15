@@ -1,5 +1,5 @@
 from django import forms
-from .models import User
+from .models import User, Profile
 from argon2 import PasswordHasher, exceptions
 
 # 회원가입 폼
@@ -136,3 +136,92 @@ class LoginForm(forms.Form):
                 PasswordHasher().verify(user.user_pw,user_pw)
             except exceptions.VerifyMismatchError:
                 return self.add_error('user_pw', '비밀번호가 일치하지 않습니다.')
+
+# 프로필 폼
+class ProfileForm(forms.ModelForm):
+    school = forms.CharField(
+        max_length=128,
+        label='학교',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'school',
+                'placeholder' : '학교'
+            }
+        ),
+        error_messages={'required' : '학교를 입력해주세요.'}
+    )
+
+    major = forms.CharField(
+        max_length=128,
+        label='전공',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'major',
+                'placeholder' : '전공'
+            }
+        ),
+        error_messages={'required' : '전공/학부를 입력해주세요.'}
+    )
+
+    gender = forms.CharField(
+        max_length=16,
+        label='성별',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'gender',
+                'placeholder' : '성별'
+            }
+        ),
+        error_messages={'required' : '성별을 선택해주세요.'}
+    )
+
+    mbti = forms.CharField(
+        max_length=16,
+        label='MBTI',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'mbti',
+                'placeholder' : 'MBTI'
+            }
+        ),
+        error_messages={'required' : 'MBTI를 선택해주세요.'}
+    )
+
+    age = forms.IntegerField(
+        label='age',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'age',
+                'placeholder' : '성별'
+            }
+        ),
+        error_messages={'required' : '나이를 입력해주세요.'}
+    )
+
+    field_order = [
+        'school',
+        'major',
+        'gender',
+        'mbti',
+        'age'
+    ]
+
+    class Meta:
+        model = Profile
+        fields = [
+            'school','major','gender','mbti','age'
+        ]
+
+    def clean(self):
+        cleaned_data = super().clean()
+
+        self.school = cleaned_data.get('school','')
+        self.major = cleaned_data.get('major','')
+        self.gender = cleaned_data.get('gender','')
+        self.mbti = cleaned_data.get('mbti','')
+        self.age = cleaned_data.get('age','')
