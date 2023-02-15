@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import User
+from .models import User, Profile
 from argon2 import PasswordHasher
-from .forms import SignupForm, LoginForm
+from .forms import SignupForm, LoginForm, ProfileForm
 
 # Create your views here.
 def signup(request):
