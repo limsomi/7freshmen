@@ -24,17 +24,36 @@
                 <img id='f_2' src="../img/꽃 4.png" alt="flower3" title="flower3">
                 <img id='f_3' src="../img/꽃 4.png" alt="flower3" title="flower3">
             </div>
+            <div class="mobile_btn">
+                <input type="checkbox" id="hamburger" />
+                <label for="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+                <div class="sidebar">
+                    <div id="menu_title"><a href="">메뉴</a></div>
+                    <div class="nav_mobile">
+                        <div class="menu_list"><a href="">문제 출제하기</a></div>
+                        <hr>
+                        <div class="menu_list"><a href="">문제 공유하기</a></div>
+                        <hr>
+                        <div class="menu_list"><a href="">방명록 보기</a></div>
+                        <hr>
+                        <div class="menu_list"><a href="">맞춘 개수 보기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bubble">메뉴</div>
             <div id="profile">
                 <div id="profile_title">내 정보</div>
                 <div id="profile_background">
-                    <!-- <img src="../img/꽃3 7.png" alt="profile" title="profile"> -->
                     <form method="post" enctype="multipart/form-data">
                         <label id='chooseFile_button'for="chooseFile">+</label>
                         <input id='chooseFile' type="file" accept="image/*" onchange="loadFile(this)" placeholder="click">
                     </form>
                 </div>
             </div>
-            <button id="share_button">문제<br>공유</button>
             <form class='information'>
                 <input class='inputbox' placeholder=' 이름을 입력해주세요' onfocus="this.placeholder=''"
                 onblur="this.placeholder='이름을 입력해주세요'" style="text-align: center;"></input>
@@ -46,14 +65,6 @@
             </form>
             <div id="profile_button">
                 <button id="save_button" onclick="Save()">저장</button>
-                <button id='comment_button'>방명록<br>보러가기!</button>
-            </div>
-            <div id="GoQuiz_button">
-                <div id="bubble">문제 출제하러 가기!</div>
-                <div id="click_me">클릭해주세요!</div>
-                <div id="chat_background">
-                    <img id='chat_button'src="../img/채팅5 1.png" alt="채팅6" title="채팅6">
-                </div>
             </div>
         </div>
     </div>

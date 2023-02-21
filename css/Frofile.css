@@ -88,7 +88,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    top:190px;
+    top:210px;
     z-index:3;
     flex-direction: column;
 }
@@ -117,7 +117,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top:485px;
+    top:520px;
     left:30px;
 
 }
@@ -125,44 +125,7 @@
 {
     width:70px;
 }
-#share_button
-{
-    width:50px;
-    height:50px;
-    position: absolute;
-    left:300px;
-    top:120px;
-    font-size: 14px;
-    visibility: hidden;
-    font-family: 'Cafe24 Ssurround';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: -0.04em;
 
-    color: #FFFFFF;
-}
-
-#comment_button
-{
-    background: #FFFFFF;
-    border-radius: 10px;
-    border-color: #FFFFFF;
-    color:#FFBEBE;
-    width: 75px;
-    height: 70px;
-}
-
-#GoQuiz_button
-{
-    position: absolute;
-    width:200px;
-    height:130px;
-    z-index: 3;
-    top:510px;
-    left:240px;
-}
 #click_me
 {
     position: absolute;
@@ -177,59 +140,9 @@
     left:40px;
     display: flex;
 }
-#chat_background
-{
-    top:25px;
-    left:30px;
-    background: #FFFFFF;
-    position: absolute;
-    display:flex;
-    width:90px;
-    height:90px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-#chat_button
-{
-    width:150px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 
-#bubble
-{
-    width:120px;
-    height:20px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 17px;
-    padding:2px;
-    /* identical to box height */
 
-    letter-spacing: -0.04em;
 
-    color: #8C8C8C;
-    position: absolute;
-    top:-15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#bubble:after {
-    content: '';
-    position: absolute;
-    border-top: 10px solid #FFFFFF;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    bottom: -9px;
-    left: 105px;
-}
 #chooseFile
 {
     visibility: hidden;
@@ -249,4 +162,193 @@
 #click_button
 {
     position: absolute;
+}
+#menu_component
+{
+    width: 30px;
+    height: 5px;
+    margin:5px;
+    background: #FFBEBE;
+    border-radius: 5px;
+}
+#menu
+{
+    position: absolute;
+    z-index: 3;
+    left:10px;
+    top:30px;
+}
+
+/* hamburger button */
+a 
+{
+    text-decoration: none;
+    color: #8C8C8C;
+}
+
+
+.mobile_btn{
+    position: absolute;
+    top:70px;
+    left: 15px;
+} 
+
+input[id="hamburger"] 
+{
+    display: none;
+}
+input[id="hamburger"] + label 
+{
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+}
+input[id="hamburger"] + label span 
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #FFBEBE;
+    border-radius: 5px;
+    transition: all 0.35s;
+}
+input[id="hamburger"] + label span:nth-child(1) 
+{
+    top: 0;
+}
+input[id="hamburger"] + label span:nth-child(2) 
+{
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="hamburger"] + label span:nth-child(3) 
+{
+    bottom: 0;
+}
+input[id="hamburger"]:checked + label 
+{
+    z-index: 5;
+}
+input[id="hamburger"]:checked + label span 
+{
+    background: #FFBEBE;
+}
+input[id="hamburger"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="hamburger"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="hamburger"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+    width: 170px;
+    height: 240px;
+    position: fixed;
+    top:-15px;
+    left: -100%;
+    z-index: 4;
+    background: #FFFFFF;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+input[id="hamburger"]:checked + label + div {
+    position: absolute;
+    left:-15px;
+}
+
+.nav_mobile {
+    position: absolute;
+    top:50px;
+    width: 170px;
+    height: 200px;
+}
+
+#menu_title a
+{
+    font-family: 'S-CoreDream-3Light';
+    position: absolute;
+    left:70px;
+    top:10px;
+    font-size: 20px;
+}
+
+.menu_list
+{
+    font-family: 'S-CoreDream-3Light';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+    width: 170px;
+}
+.menu_list a
+{
+    display: flex;
+    flex-direction: column;
+    font-size:18px;
+}
+
+
+.sidebar .menu_list a:hover{
+
+    text-decoration: none;
+    color:black;
+    padding: 0;
+    margin: 0;
+    border: 0px;
+    background: rgba(255, 239, 198, 0.5);
+}
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 말풍선 */
+#bubble
+{
+    width:40px;
+    height:30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    letter-spacing: -0.04em;
+
+    color: #8C8C8C;
+    padding:2px;
+
+    position: absolute;
+    top:110px;
+    left:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+#bubble:after {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #FFFFFF;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    top: -10px;
+    left: 22px;
 }

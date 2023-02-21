@@ -37,8 +37,6 @@ function Save()
             var item=input.item(i);
             item.readOnly=true;
         }
-        var share_button=document.getElementById("share_button");
-        share_button.style.visibility='visible'
 
     }
     else{
@@ -49,7 +47,5 @@ function Save()
             var item=input.item(i);
             item.readOnly=false;
         }
-        var share_button=document.getElementById("share_button");
-        share_button.style.visibility='hidden'
     }
 }
