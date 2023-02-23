@@ -54,44 +54,43 @@
                     </form>
                 </div>
             </div>
-            <div class="information">
-                <form>
-                    <div class="inputbox" style="text-align: center;">
-                        <input class='input' placeholder=' 이름을 입력해주세요' onfocus="this.placeholder=''"
-                        onblur="this.placeholder='이름을 입력해주세요'" style="text-align: center;">
-                    </div>
-                </form>
-                    <div class="inputbox">학교 : <input class="input" type="text"></div>
-                    <div class="inputbox">전공/학부 : <input class="input" type="text"></div>
-                    <div class="inputbox">성별 : <input class="input" type="text"></div>
-                    <div class="inputbox">MBTI : <input class="input" type="text"></div>
-                    <div class="inputbox">나이 : <input class="input" type="text"></div>
-                    <div class="inputbox">자취 유/무 : 
-                        <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''" 
-                        onblur="this.placeholder='(선택)'">
-                    </div>
-                    <div class="inputbox">내가 선호하는 음식은? : 
-                        <input class="input" type="text" placeholder="(선택)" style="width:120px;" onfocus="this.placeholder=''" 
-                        onblur="this.placeholder='(선택)'">
-                    </div>
-                    <div class="inputbox">나의 주량은? : 
-                        <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''"
-                        onblur="this.placeholder='(선택)'">
-                    </div>
-                    <div class="inputbox">나의 고향은? : 
-                        <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''"
-                        onblur="this.placeholder='(선택)'">
-                        
-                    </div>
-                    <div id='timetable'>
-                        <div style="float:left;">내 시간표는?   </div>
-                        <input id="timetable_button" type="file" accept="image/*" onchange="loadFile_timetable(this)" value="내 시간표는? :">
-                        <label id='timetable_click' for="timetable_button">사진 추가하기 +</label>
-                        <div id="img_container"></div>
-                    </div>
 
-                </form>
-            </div>
+            <form class="information">
+                <div class="inputbox" style="text-align: center;">
+                    <input class='input' placeholder=' 이름을 입력해주세요' onfocus="this.placeholder=''"
+                    onblur="this.placeholder='이름을 입력해주세요'" style="text-align: center;">
+                </div>
+                <div class="inputbox">학교 : <input class="input" type="text"></div>
+                <div class="inputbox">전공/학부 : <input class="input" type="text"></div>
+                <div class="inputbox">성별 : <input class="input" type="text"></div>
+                <div class="inputbox">MBTI : <input class="input" type="text"></div>
+                <div class="inputbox">나이 : <input class="input" type="text"></div>
+                <div class="inputbox">자취 유/무 : 
+                    <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''" 
+                    onblur="this.placeholder='(선택)'">
+                </div>
+                <div class="inputbox">내가 선호하는 음식은? : 
+                    <input class="input" type="text" placeholder="(선택)" style="width:120px;" onfocus="this.placeholder=''" 
+                    onblur="this.placeholder='(선택)'">
+                </div>
+                <div class="inputbox">나의 주량은? : 
+                    <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='(선택)'">
+                </div>
+                <div class="inputbox">나의 고향은? : 
+                    <input class="input" type="text" placeholder="(선택)" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='(선택)'">
+                    
+                </div>
+                <div id='timetable'>
+                    <div style="float:left;">내 시간표는?   </div>
+                    <input id="timetable_button" type="file" accept="image/*" onchange="loadFile_timetable(this)" value="내 시간표는? :">
+                    <label id='timetable_click' for="timetable_button">사진 추가하기 +</label>
+                    <div id="img_container"></div>
+                </div>
+
+            </form>
+
             <div id="profile_button">
                 <button id="save_button" onclick="Save()">저장</button>
             </div>
