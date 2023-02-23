@@ -37,7 +37,7 @@
 }
 
 /* 입력창 */
-.inputbox
+.inputbox,#timetable
 {
     box-sizing: border-box;
     width: 307px;
@@ -60,7 +60,7 @@
     letter-spacing: -0.04em;
 
     color: #8C8C8C;
-    }
+}
 .inputboxs_sign .inputbox
 {
     box-sizing: border-box;
